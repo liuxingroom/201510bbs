@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  
+  <!-- 全站乱码过滤器开始 -->
+  	<filter>
+  		<description>全站乱码过滤器</description>
+  		<filter-name>EncodeFilter</filter-name>
+  		<filter-class>cn.xing.filter.EncodeFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+  		<filter-name>EncodeFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+  <!-- 全站乱码过滤器结束 -->
+  
+  <!--servletContext 域的监听器开始-->
+   <listener>
+  	<listener-class>cn.xing.listener.MySCListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>cn.xing.domain.UserForm</listener-class>
+  </listener>
+  <!--servletContext 域的监听器结束-->
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.xing.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>cn.xing.web.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BackGroundServlet</servlet-name>
+    <servlet-class>cn.xing.web.BackGroundServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>cn.xing.web.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValiNameServlet</servlet-name>
+    <servlet-class>cn.xing.web.ValiNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>cn.xing.web.RegistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>cn.xing.web.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RootShowServlet</servlet-name>
+    <servlet-class>cn.xing.web.RootShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoodPostServlet</servlet-name>
+    <servlet-class>cn.xing.web.GoodPostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MasterServlet</servlet-name>
+    <servlet-class>cn.xing.web.MasterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyPostServlet</servlet-name>
+    <servlet-class>cn.xing.web.MyPostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OpenShowServlet</servlet-name>
+    <servlet-class>cn.xing.web.OpenShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoGoodServlet</servlet-name>
+    <servlet-class>cn.xing.web.DoGoodServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoTopServlet</servlet-name>
+    <servlet-class>cn.xing.web.DoTopServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteAnswerServlet</servlet-name>
+    <servlet-class>cn.xing.web.DeleteAnswerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClassListServlet</servlet-name>
+    <servlet-class>cn.xing.web.ClassListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClassServlet</servlet-name>
+    <servlet-class>cn.xing.web.ClassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyServlet</servlet-name>
+    <servlet-class>cn.xing.web.ModifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetClassServlet</servlet-name>
+    <servlet-class>cn.xing.web.GetClassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClassAddServlet</servlet-name>
+    <servlet-class>cn.xing.web.ClassAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddSortServlet</servlet-name>
+    <servlet-class>cn.xing.web.AddSortServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteClassServlet</servlet-name>
+    <servlet-class>cn.xing.web.DeleteClassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ACIDServlet</servlet-name>
+    <servlet-class>cn.xing.web.ACIDServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserListServlet</servlet-name>
+    <servlet-class>cn.xing.web.UserListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyUserServlet</servlet-name>
+    <servlet-class>cn.xing.web.ModifyUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateUserServlet</servlet-name>
+    <servlet-class>cn.xing.web.UpdateUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <servlet-class>cn.xing.web.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BoardListServlet</servlet-name>
+    <servlet-class>cn.xing.web.BoardListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BListShowServlet</servlet-name>
+    <servlet-class>cn.xing.web.BListShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetBoardServlet</servlet-name>
+    <servlet-class>cn.xing.web.GetBoardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateBoardServlet</servlet-name>
+    <servlet-class>cn.xing.web.UpdateBoardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteBoardServlet</servlet-name>
+    <servlet-class>cn.xing.web.DeleteBoardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BoardAddServlet</servlet-name>
+    <servlet-class>cn.xing.web.BoardAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddPageServlet</servlet-name>
+    <servlet-class>cn.xing.web.AddPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PublishPostServlet</servlet-name>
+    <servlet-class>cn.xing.web.PublishPostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddPostServlet</servlet-name>
+    <servlet-class>cn.xing.web.AddPostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddAnswerServlet</servlet-name>
+    <servlet-class>cn.xing.web.AddAnswerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoFristServlet</servlet-name>
+    <servlet-class>cn.xing.web.DoFristServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteRootServlet</servlet-name>
+    <servlet-class>cn.xing.web.DeleteRootServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/servlet/IndexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BackGroundServlet</servlet-name>
+    <url-pattern>/servlet/BackGroundServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValiNameServlet</servlet-name>
+    <url-pattern>/servlet/ValiNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/servlet/RegistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/servlet/SearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RootShowServlet</servlet-name>
+    <url-pattern>/servlet/RootShowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodPostServlet</servlet-name>
+    <url-pattern>/servlet/GoodPostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MasterServlet</servlet-name>
+    <url-pattern>/servlet/MasterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyPostServlet</servlet-name>
+    <url-pattern>/servlet/MyPostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OpenShowServlet</servlet-name>
+    <url-pattern>/servlet/OpenShowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoGoodServlet</servlet-name>
+    <url-pattern>/servlet/DoGoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoTopServlet</servlet-name>
+    <url-pattern>/servlet/DoTopServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteAnswerServlet</servlet-name>
+    <url-pattern>/servlet/DeleteAnswerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClassListServlet</servlet-name>
+    <url-pattern>/servlet/ClassListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClassServlet</servlet-name>
+    <url-pattern>/servlet/ClassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyServlet</servlet-name>
+    <url-pattern>/servlet/ModifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetClassServlet</servlet-name>
+    <url-pattern>/servlet/GetClassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClassAddServlet</servlet-name>
+    <url-pattern>/servlet/ClassAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddSortServlet</servlet-name>
+    <url-pattern>/servlet/AddSortServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteClassServlet</servlet-name>
+    <url-pattern>/servlet/DeleteClassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ACIDServlet</servlet-name>
+    <url-pattern>/servlet/ACIDServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserListServlet</servlet-name>
+    <url-pattern>/servlet/UserListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyUserServlet</servlet-name>
+    <url-pattern>/servlet/ModifyUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserServlet</servlet-name>
+    <url-pattern>/servlet/UpdateUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <url-pattern>/servlet/DeleteUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BoardListServlet</servlet-name>
+    <url-pattern>/servlet/BoardListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BListShowServlet</servlet-name>
+    <url-pattern>/servlet/BListShowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetBoardServlet</servlet-name>
+    <url-pattern>/servlet/GetBoardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBoardServlet</servlet-name>
+    <url-pattern>/servlet/UpdateBoardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteBoardServlet</servlet-name>
+    <url-pattern>/servlet/DeleteBoardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BoardAddServlet</servlet-name>
+    <url-pattern>/servlet/BoardAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddPageServlet</servlet-name>
+    <url-pattern>/servlet/AddPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PublishPostServlet</servlet-name>
+    <url-pattern>/servlet/PublishPostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddPostServlet</servlet-name>
+    <url-pattern>/servlet/AddPostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAnswerServlet</servlet-name>
+    <url-pattern>/servlet/AddAnswerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoFristServlet</servlet-name>
+    <url-pattern>/servlet/DoFristServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteRootServlet</servlet-name>
+    <url-pattern>/servlet/DeleteRootServlet</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

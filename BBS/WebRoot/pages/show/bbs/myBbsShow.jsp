@@ -88,9 +88,9 @@
           	<tr height="10"><td colspan="6"></td></tr>
           	<tr height="30">
           		<td colspan="6" background="${pageContext.request.contextPath }/images/index/boardE.jpg">
-          			<jsp:include flush="true" page="/pages/page.jsp">
+          		<%-- 	<jsp:include flush="true" page="/pages/page.jsp">
                        <jsp:param name="gowhich" value="user/search.do"/>
-                  	</jsp:include>
+                  	</jsp:include> --%>
           		</td>
           	</tr>
     	</table>

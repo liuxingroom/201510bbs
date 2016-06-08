@@ -20,7 +20,7 @@
               	<a href="${pageContext.request.contextPath }/index.jsp"><img src="${pageContext.request.contextPath }/images/admin/adminB.jpg" style="border:0"></a>
               </td>
               <td align="center">
-              	<a href="${pageContext.request.contextPath }/pages/regist.jsp""><img src="${pageContext.request.contextPath }/images/admin/adminE.jpg" style="border:0"></a>
+              	<a href="${pageContext.request.contextPath }/pages/login.jsp""><img src="${pageContext.request.contextPath }/images/admin/adminE.jpg" style="border:0"></a>
               </td>
         </tr>
         <tr height="33">

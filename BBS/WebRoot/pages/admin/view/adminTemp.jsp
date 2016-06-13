@@ -18,7 +18,7 @@
         </tr>
         <tr height="33">
         	<td width="center" align="center" background="${pageContext.request.contextPath }/images/admin/message.jpg">
-        		<p>此处用来提示错误信息</p>
+        		<p></p>
         	</td> 
         </tr>        
         <tr height="430">
